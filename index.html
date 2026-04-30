@@ -296,21 +296,16 @@
   }
 
   .hero-stats {
-    /* Desktop: flotar sobre el hero usando posición absoluta relativa al wrapper */
     display: flex;
     flex-direction: column;
     gap: 12px;
     animation: fadeUp 1s ease 0.3s both;
     z-index: 2;
-    /* Posición absoluta fingida: sacamos las stats del flujo y las ponemos encima del hero */
-    position: relative;
-    margin-top: -220px;   /* sube las stats para solaparse con el hero */
-    margin-left: auto;
-    width: fit-content;
-    padding-right: 5%;
-    pointer-events: none;
+    /* En desktop: overlay absoluto sobre el hero usando el wrapper */
+    position: absolute;
+    right: 5%;
+    bottom: 15%;
   }
-  .hero-stats .stat-card { pointer-events: all; }
 
   .stat-card {
     background: rgba(255,255,255,0.06);
